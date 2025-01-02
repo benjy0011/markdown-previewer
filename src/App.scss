@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-textarea {
+#editor, #preview {
   width: 100%;
   height: 100%;
   resize: none;
@@ -13,4 +13,26 @@ textarea {
   box-sizing: border-box;
   font-size: larger;
   margin: auto; 
+  background: white;
+  color: black;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
 }
